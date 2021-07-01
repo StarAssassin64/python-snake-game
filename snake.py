@@ -58,22 +58,22 @@ def game_over():
 while True:
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_w:
-                change_to = "UP"
-            if event.key == pygame.K_s:
-                change_to = 'DOWN'
-            if event.key == pygame.K_a:
-                change_to = 'LEFT'
-            if event.key == pygame.K_d:
-                change_to = "RIGHT"
+            if event.key == pygame.K_UP:
+                direction = "UP"
+            if event.key == pygame.K_DOWN:
+                direction = 'DOWN'
+            if event.key == pygame.K_LEFT:
+                direction = 'LEFT'
+            if event.key == pygame.K_RIGHT:
+                direction = "RIGHT"
 
-    if change_to == 'UP' and direction != 'DOWN':
+    if direction == 'UP' and direction != 'DOWN':
         direction == 'UP'
-    if change_to == 'DOWN' and direction != 'UP':
+    if direction == 'DOWN' and direction != 'UP':
         direction == 'DOWN'
-    if change_to == 'LEFT' and direction != 'RIGHT':
+    if direction == 'LEFT' and direction != 'RIGHT':
         direction == 'LEFT'
-    if change_to == 'RIGHT' and direction != 'LEFT':
+    if direction == 'RIGHT' and direction != 'LEFT':
         direction = 'RIGHT'
     
     if direction == 'UP':
